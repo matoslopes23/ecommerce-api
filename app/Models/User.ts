@@ -21,6 +21,7 @@ export default class User extends BaseModel {
 
   @column({ columnName: 'image_id' })
   public imageId: number
+
   @column()
   public email: string
 
