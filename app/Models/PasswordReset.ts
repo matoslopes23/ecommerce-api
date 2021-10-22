@@ -7,7 +7,8 @@ export default class PasswordReset extends BaseModel {
   public id: number
 
   @column({ columnName: 'user_id' })
-  public userId
+  public userId: number
+
   @column()
   public email: string
 

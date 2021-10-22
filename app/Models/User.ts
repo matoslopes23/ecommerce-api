@@ -19,6 +19,8 @@ export default class User extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column({ columnName: 'image_id' })
+  public imageId: number
   @column()
   public email: string
 
@@ -34,7 +36,9 @@ export default class User extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 
-  @belongsTo(() => Image)
+  @belongsTo(() => Image, {
+    foreignKey: 'image_id'
+  })
   public images: BelongsTo<typeof Image>
 
   @manyToMany(() => Coupon)
