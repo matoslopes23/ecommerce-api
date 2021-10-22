@@ -1,3 +1,4 @@
+import Coupon from 'App/Models/Coupon';
 import Category from 'App/Models/Category';
 import Image from 'App/Models/Image';
 import { DateTime } from 'luxon'
@@ -40,4 +41,7 @@ export default class Product extends BaseModel {
     pivotTable: 'category_product'
   })
   public categories: ManyToMany<typeof Category>
+
+  @manyToMany(() => Coupon)
+  public coupons: ManyToMany<typeof Coupon>
 }
