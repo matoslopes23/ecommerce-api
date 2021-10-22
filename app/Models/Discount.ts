@@ -1,4 +1,4 @@
-import { Coupon } from 'App/Models/Coupon';
+import Coupon from 'App/Models/Coupon';
 import { DateTime } from 'luxon'
 import { BaseModel, column, ManyToMany, manyToMany } from '@ioc:Adonis/Lucid/Orm'
 import Order from './Order'
